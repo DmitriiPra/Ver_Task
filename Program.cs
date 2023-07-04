@@ -1,7 +1,7 @@
 ﻿/* Программа из имеющегося массива строк формирует 
 массив из строк, длина которых меньше или равно 3 символа. */
 
-String[] arrWords = {"Kazan'", "Tyumen", "Gasnn", "2007", "nn:-)"};
+String[] arrWords = {"Kazan'", "Tyumen", "Gas", "207", ":-)"};
 
 int count = ArrCount(0, arrWords);
 String[] selectArray = СreatureSelectArray(count, 0, arrWords);
@@ -18,14 +18,10 @@ int ArrCount (int cnt, String[]arr)
     }
     return cnt;
 }
-
 String[] СreatureSelectArray(int cnt, int n, String[]arr)
 {
     String[] selectWords = new String [cnt];
-    // if (cnt == 0)
-    // {
-    //     PrintArray(arr);
-    // } else 
+
     if (cnt == 0) return selectWords;
     else 
     {
@@ -40,8 +36,7 @@ String[] СreatureSelectArray(int cnt, int n, String[]arr)
     }
     return selectWords;
 }
-
-void PrintArray(int cnt, String[] arr, String[] selectarr)
+void PrintArray(int cnt, String[] arr, String[] selectArr)
 {
     Console.WriteLine();
     if (cnt == 0)
@@ -61,11 +56,11 @@ void PrintArray(int cnt, String[] arr, String[] selectarr)
             Console.Write($"{arr[i]}, ");
         }
     Console.Write($"{arr[arr.Length - 1]}] --> [");
-        for (int i = 0; i < selectarr.Length - 1; i++)
+        for (int i = 0; i < cnt - 1; i++)
         {
-            Console.Write($"{selectarr[i]}, ");
+            Console.Write($"{selectArr[i]}, ");
         }
-    Console.WriteLine($"{arr[selectarr.Length - 1]}]");
+    Console.WriteLine($"{selectArr[cnt - 1]}]");
     Console.WriteLine();
     }
 }
