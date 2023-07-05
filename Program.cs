@@ -1,7 +1,7 @@
 ﻿/* Программа из имеющегося массива строк формирует 
 массив из строк, длина которых меньше или равно 3 символа. */
 
-String[] arrWords = { "Kazan'", "Tyumen", "Gas", "", ":-)", "1234" };
+String[] arrWords = { "Kazan'", "Tyumen", "Gas", "moscow", ":-)", "123" };
 
 int count = ArrCount(0, arrWords);
 String[] selectArray = СreatureSelectArray(count, 0, arrWords);
